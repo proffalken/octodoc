@@ -1,7 +1,7 @@
 FROM python:3.10-slim-bullseye
 
-RUN mkdir /app
-WORKDIR /app
+RUN mkdir -p /octoprint/octoprint
+WORKDIR /octoprint
 RUN apt update
 RUN apt upgrade -y
 RUN apt install -y build-essential libsasl2-dev python-dev libldap2-dev libssl-dev
@@ -14,5 +14,5 @@ EXPOSE 5000
 
 USER octoprint
 
-ENTRYPOINT ["octoprint","serve"]
+ENTRYPOINT ["octoprint","serve","--iknowwhatimdoing","--host 0.0.0.0","--port","5000","--basedir","/octoprint/octoprint"]
 

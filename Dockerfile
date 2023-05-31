@@ -14,5 +14,5 @@ EXPOSE 5000
 
 USER octoprint
 
-ENTRYPOINT ["octoprint","serve","--iknowwhatimdoing","--host 0.0.0.0","--port","5000","--basedir","/octoprint/octoprint"]
+ENTRYPOINT ["octoprint","serve","--iknowwhatimdoing","--host", "0.0.0.0","--port","5000","--basedir","/octoprint/octoprint"]
 

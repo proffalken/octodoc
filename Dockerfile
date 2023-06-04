@@ -9,6 +9,7 @@ RUN pip install octoprint
 RUN adduser octoprint
 RUN usermod -a -G dialout,adm octoprint
 RUN pip install https://github.com/gillg/OctoPrint-LDAP/archive/refs/heads/master.zip
+RUN pip install https://github.com/derekantrican/OctoPrint-Webhooks/archive/master.zip
 RUN chown -Rvf octoprint: /octoprint
 
 EXPOSE 5000
